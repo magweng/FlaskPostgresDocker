@@ -1,0 +1,11 @@
+{% extends "layout.html" %} {% from "_formhelpers.html" import render_field %}
+{% block title %} Home {% endblock %} {% block content %}
+
+<form method="post">
+  <div class="d-flex">
+    <dl>{{ render_field(form.message) }}</dl>
+    <p><input class="mt-4 btn btn-success" type="submit" value="Submit" /></p>
+  </div>
+</form>
+
+{% endblock %}

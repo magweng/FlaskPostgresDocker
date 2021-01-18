@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block title %} Home {% endblock %} {% block
+content %}
+<table class="table table-striped mt-5">
+  <tr>
+    <th>Date</th>
+    <th>Message</th>
+  </tr>
+
+  {% for msg in messages %}
+  <tr>
+    <td class="col-2">{{ msg.datetime.strftime("%d/%m/%Y, %H:%M:%S") }}</td>
+    <td class="col-10">{{ msg.message }}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}
