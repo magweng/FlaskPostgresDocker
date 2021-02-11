@@ -8,12 +8,14 @@ Start and build container
 ```
  docker-compose up -d --build
 ```
+Rebuild and run
+```
+docker-compose down;  docker-compose up -d --build;
+```
 Create new db instance
 ```
  docker-compose exec web python manage.py create_db
 ```
-
-
 
 # Other helful commands used while learning
 
